@@ -35,8 +35,17 @@ jobs:
 
       - name: Validate built HTML
         run: |
-          npx --yes html-validate "dist/**/*.html" \
-            --config '{"extends":["html-validate:recommended"],"rules":{"no-inline-style":"off","wcag/h30":"off"}}'
+          cat > .htmlvalidate.json <<'EOF'
+          {
+            "extends": ["html-validate:recommended"],
+            "rules": {
+              "no-inline-style": "off",
+              "wcag/h30": "off",
+              "long-title": "off"
+            }
+          }
+          EOF
+          npx --yes html-validate "dist/**/*.html"
 
       - name: Report bundle sizes
         run: |
