@@ -1,0 +1,31 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: #05060a;
+    color: #e8eaf2;
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    overflow: hidden;
+}
+
+#scene {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+h1 {
+    position: fixed;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    margin: 0;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    color: rgba(232, 234, 242, 0.7);
+    mix-blend-mode: difference;
+    pointer-events: none;
+}
